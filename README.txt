@@ -163,7 +163,8 @@ rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
 
 
 
-*color
+color
+--------
 bgc-[colorName] = {backgroundColor :o }
 bc-[colorName] = {borderColor :o }
 blc-[colorName] = {borderLeftColor :o }
@@ -176,6 +177,6 @@ tsdoc-[colorName] = {textShadowColor : o};
 tint-[colorName] = {tintColor : o};
 colorName = {color : o};
 
-[dd]:https://github.com/khjde1207/rn-class/blob/master/Src/colors.js
+https://github.com/khjde1207/rn-class/blob/master/Src/colors.js
 
 Transforms
