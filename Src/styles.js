@@ -83,13 +83,9 @@ function getSize () {
 
     rtn[`min-h${i}%`] = {minHeight : `${i}%` };
     rtn[`min-w${i}%`] = {minWidth : `${i}%` };
-    rtn[`min-h-w${i}%`] = {minHeight : `${i}%` };
-    rtn[`min-w-h${i}%`] = {minWidth : `${i}%` };
 
     rtn[`max-h${i}%`] = {maxHeight : `${i}%` };
     rtn[`max-w${i}%`] = {maxWidth : `${i}%` };
-    rtn[`max-h-w${i}%`] = {maxHeight : `${i}%` };
-    rtn[`max-w-h${i}%`] = {maxWidth : `${i}%` };
 
     rtn[`l${i}`] = {left : wp(i) };
     rtn[`r${i}`] = {right : wp(i) };
