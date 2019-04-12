@@ -1,35 +1,39 @@
-import style from './Src/styles'
-import colorData from './Src/colors'
-import _ from 'lodash'
-loadColor  = (colors)=>{ 
-  let rtn = {};
-  _.forEach(colors , (o, k )=>{
-    rtn[`bgc-${k}`] = {backgroundColor :o }
+import React , {Component}from 'react';
+import  s from './Datas/styles';
+import colorData from './Datas/colors'
 
-    rtn[`bc-${k}`] = {borderColor :o }
-    rtn[`blc-${k}`] = {borderLeftColor :o }
-    rtn[`btc-${k}`] = {borderTopColor :o }
-    rtn[`brc-${k}`] = {borderRightColor :o }
-    rtn[`bbc-${k}`] = {borderBottomColor :o }
-    rtn[`bsc-${k}`] = {borderStartColor :o }
-    rtn[`bec-${k}`] = {borderEndColor :o }
-    rtn[k] = {color : o};
+import Conv from './Src/Conv'
 
-    rtn[`tsdoc-${k}`] = {textShadowColor : o};
+import { Text} from 'react-native';
+import _ from 'lodash' 
+
+
+
+let style = Object.assign({}, s , Conv.convColor(colorData));
+
+RNcomp = (Comp , props)=>{
+  let {cls} = props;
+  let aa = {style:{...style[cls]}};
+  return (
+    <Comp {...props} {...aa}>{props.children}</Comp> 
+  )
+}
+
+class rnClass{
+  // Component = {};
+  constructor(){
     
-    rtn[`tint-${k}`] = {tintColor : o};
+  }
 
-    
-  })  
-  return rtn;
-};
+  addComp(Comp){
+    this[Comp.displayName] = RNcomp.bind(null,Comp);
 
-loadColor(colorData)
-export default {
-  
+  }
+
 
   
 }  
 
+export default (new rnClass)
 
-// export default (new rnClass);
+// export default ;

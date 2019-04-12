@@ -176,6 +176,23 @@ bsc-[colorName] = {borderStartColor :o }
 bec-[colorName] = {borderEndColor :o }
 tsdoc-[colorName] = {textShadowColor : o};
 tint-[colorName] = {tintColor : o};
+selc-[colorName] = {selectionColor : o}; 
+phtc-[colorName] ={placeholderTextColor : o};
+subtc-[colorName] ={subtitleColor : o};
+tc-[colorName] = {titleColor : o};
+uc-[colorName] = {underlayColor:o};
+
+chkc-[colorName] =  {checkedColor : o}
+unchkc-[colorName] =  {uncheckedColor : o}
+rec-[colorName] =  {reverseColor : o}
+winbgc-[colorName] =  {windowBackgroundColor:o};
+iconc-[colorName] =  {iconColor:o};
+seldc-[colorName] = {selectedColor : o};
+
+statusc-[colorName] =  {androidStatusBarColor:o}; //android
+
+phic-[colorName] = {placeholderIconColor : o}//ios
+tdc-[colorName] = {textDecorationColor : o}; //ios
 colorName = {color : o};
 
 https://github.com/khjde1207/rn-class/blob/master/Src/colors.js
