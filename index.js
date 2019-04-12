@@ -1,8 +1,9 @@
 import style from './Src/styles'
+console.log(style) 
+
 export default {
-  constructor(){
-    // console.log(style) 
-  }
+  
+  
 }  
 
 
