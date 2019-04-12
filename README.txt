@@ -165,6 +165,7 @@ rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
 
 color
 --------
+
 bgc-[colorName] = {backgroundColor :o }
 bc-[colorName] = {borderColor :o }
 blc-[colorName] = {borderLeftColor :o }
