@@ -54,6 +54,15 @@ getMarginPadding = ()=>{
     rtn[`pv${idx}%`]   = {paddingVertical : `${idx}%`};
 
     rtn[`zidx${idx}`] = {zIndex : idx}
+
+    rtn[`sdof${idx}`] = {shadowOffset : {width : wp(idx) , height : hp(idx) }}
+    rtn[`txt-sdof${idx}`] = {shadowOffset : {width : wp(idx) , height : hp(idx) }}
+    for(let y = -30 ; y <= 30 ; y+= 0.2){
+      let hidx = Math.round(y);
+      rtn[`sdof_${idx}_${hidx}`] = {shadowOffset : {width : wp(idx) , height : hp(hidx)}};
+      rtn[`txt-sdof_${idx}_${hidx}`] = {shadowOffset : {width : wp(idx) , height : hp(hidx)}};
+    }
+    
   }
   return rtn;
 }
@@ -111,6 +120,21 @@ function getBorder () {
     rtn[`bl${i}`] = {borderLeftWidth : wp(i)}
     rtn[`br${i}`] = {borderRightWidth : wp(i)}
     rtn[`bs${i}`] = {borderStartWidth : wp(i)}
+
+    rtn[`r-be${i}`] = {borderBottomEndRadius:hp(i)};
+    rtn[`r-bl${i}`] = {borderBottomLeftRadius:hp(i)};
+    rtn[`r-br${i}`] = {borderBottomRightRadius:hp(i)};
+    rtn[`r-bs${i}`] = {borderBottomStartRadius:hp(i)};
+    rtn[`r-te${i}`] = {borderTopEndRadius:hp(i)};
+    rtn[`r-tl${i}`] = {borderTopLeftRadius:hp(i)};
+    rtn[`r-tr${i}`] = {borderTopRightRadius:hp(i)};
+    rtn[`r-ts${i}`] = {borderTopStartRadius:hp(i)};
+    rtn[`r-b${i}`]  = {borderRadius:hp(i)};
+
+    rtn[`sdo-r${i}`]  = {shadowRadius:hp(i)};
+
+    rtn[`tsdo-r${i}`]  = {textShadowRadius:hp(i)};
+    
   }
 
   return rtn;
@@ -133,11 +157,38 @@ function getFlex(){
   }
   return rtn;
 }
+function getFornt(){
+  let rtn = {};
+  for(var i = 0 ; i <= 100 ; i++){
+    rtn[`f${i}`] = {fontSize : hp(i)};
+    rtn[`lh${i}`] = {lineHeight : hp(i)};
+
+    // rtn[`f${i}`] = {fontSize : hp(i)};
+  }
+}
+function getExt(){
+  let rtn = [];
+  for(var i = 0 ; i < 30 ; i++){
+    rtn[`size${i}`] =  {size : wp(i)};
+    rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
+
+  }
+  for(var i = 0 ; i < 1 ; i+=0.1){
+    let idx = Math.round(i);
+    rtn["op${idx}"] =  {opacity : i};
+    rtn["sdop"] = {shadowOpacity : i};
+  }
+  
+  return rtn;
+}
+
 export default {
   ...getMarginPadding(),
   ...getSize(),
   ...getBorder(),
   ...getFlex(),
+  ...getExt(),
+  ...getFornt(),
   "po-ab" : {position : "absolute"},
   "po-re" : {position : "relative"},
   "po-full" : {position : "absolute" , left : 0 , top : 0 , right : 0 , bottom : 0},
@@ -180,13 +231,70 @@ export default {
   "jc-sa" : {justifyContent : 'space-around'},
   "jc-se" : {justifyContent : 'space-evenly'},
   
+  "br-solid"   : {borderStyle : "solid"},
+  "br-dotted"  : {borderStyle : "dotted"},
+  "br-dashed"  : {borderStyle : "dashed"},
 
+  'bfv-v' : {backfaceVisibility : "visible"},
+  'bfv-h' : {backfaceVisibility : "hidden"},
+
+  'fs-n' : {fontStyle : "normal"},
+  'fs-i' : {fontStyle : "italic"},
+
+  'fw-n' : {fontWeight : "normal"},
+  'fw-b' : {fontWeight : "bold"},
+  'fw-1' : {fontWeight : 100},
+  'fw-2' : {fontWeight : 200},
+  'fw-3' : {fontWeight : 300},
+  'fw-4' : {fontWeight : 400},
+  'fw-5' : {fontWeight : 500},
+  'fw-6' : {fontWeight : 600},
+  'fw-7' : {fontWeight : 700},
+  'fw-8' : {fontWeight : 800},
+  'fw-9' : {fontWeight : 900},
+
+  'ta-a' : {textAlign : 'auto'},
+  'ta-l' : {textAlign : 'left'},
+  'ta-r' : {textAlign : 'right'},
+  'ta-c' : {textAlign : 'center'},
+  'ta-j' : {textAlign : 'justify'},
+
+  'tdl-n' : {textDecorationLine :"none"},
+  'tdl-u' : {textDecorationLine :"underline"},
+  'tdl-l' : {textDecorationLine :"line-through"},
+  'tdl-ul' : {textDecorationLine :"underline line-through"},
+  'of-v' : {overflow: "visible"},
+  'of-h' : {overflow: "hidden"},
+
+
+  'rsm-s' : {resizeMode : "stretch"},
+  'rsm-r' : {resizeMode : "repeat"},
+  'rsm-c' : {resizeMode : "center"},
+  'rsm-cov' : {resizeMode : "cover"},
+  'rsm-con' : {resizeMode : "contain"},
+
+  
 }
-
+//'cover', 'contain', 'stretch', 'repeat', 'center')
 
 // layout-props 에서 아직 사용 해보지 않은 속성. 쓸일이 있을지는 모름. 
 // aspectRatio
 // direction
-// overflow
+// 
 // start
 // end
+
+//view props 에서 android 만 지원되거나 ios 만 지원 되는건 우선 제거 . 
+//elevation
+
+
+// textprops 에서 
+
+// includeFontPadding
+// textAlignVertical
+// fontVariant
+// letterSpacing
+// textDecorationColor
+// textDecorationStyle
+// textTransform
+// writingDirection

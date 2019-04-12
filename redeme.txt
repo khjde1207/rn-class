@@ -41,7 +41,9 @@ max-h[idx]
 max-h-w[idx] :{maxHeight : [idx]]} // 너비 기준 
 max-w-h[idx] :{maxHeight : [idx]]} // 너비 기준 
 
+sdof : {shadowOffset : {width :, height :  }}
 
+sdof_X_Y : {shadowOffset : {width : X, height : Y }}
 
 위치: 
 l[idx]: {left:  [idx]}
@@ -57,6 +59,18 @@ be : {borderEndWidth : }
 bl : {borderLeftWidth : }
 br : {borderRightWidth : }
 bs : {borderStartWidth : }
+
+r-be : {borderBottomEndRadius:};
+r-bl : {borderBottomLeftRadius:};
+r-br : {borderBottomRightRadius:};
+r-bs : {borderBottomStartRadius:};
+r-te : {borderTopEndRadius:};
+r-tl : {borderTopLeftRadius:};
+r-tr : {borderTopRightRadius:};
+r-ts : {borderTopStartRadius:};
+r-b : {borderRadius:};
+
+sdo-r  = {shadowRadius:};
 
 flex :
 
@@ -110,3 +124,42 @@ flxs : flexShrink
 "jc-sb" : {justifyContent : 'space-between'},
 "jc-sa" : {justifyContent : 'space-around'},
 "jc-se" : {justifyContent : 'space-evenly'},
+
+
+'bfvv' : {backfaceVisibility : "visible"},
+'bfvh' : {backfaceVisibility : "hidden"},
+
+f[idx] : {fontSize : i}; 
+lh[idx] : {lineHeight : i}; 
+
+'fw-n' : {fontWeight : "normal"},
+'fw-b' : {fontWeight : "bold"},
+'fw-1' : {fontWeight : 100},
+'fw-2' : {fontWeight : 200},
+'fw-3' : {fontWeight : 300},
+'fw-4' : {fontWeight : 400},
+'fw-5' : {fontWeight : 500},
+'fw-6' : {fontWeight : 600},
+'fw-7' : {fontWeight : 700},
+'fw-8' : {fontWeight : 800},
+'fw-9' : {fontWeight : 900},
+
+
+'tdl-n' : {textDecorationLine :"none"},
+'tdl-u' : {textDecorationLine :"underline"},
+'tdl-l' : {textDecorationLine :"line-through"},
+'tdl-ul' : {textDecorationLine :"underline line-through"},
+
+'of-v' : {overflow: "visible"},
+'of-h' : {overflow: "hidden"},
+
+'rsm-s' : {resizeMode : "stretch"},
+'rsm-r' : {resizeMode : "repeat"},
+'rsm-c' : {resizeMode : "center"},
+'rsm-cov' : {resizeMode : "cover"},
+'rsm-con' : {resizeMode : "contain"},
+
+rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
+
+
+Transforms
