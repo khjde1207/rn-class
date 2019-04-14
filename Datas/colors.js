@@ -1,4 +1,13 @@
 export default {
+  "test" : "#F0F",
+  "test1" : "#00F",
+  "test2" : "#F00",
+  "test3" : "#FFF",
+  "test4" : "#0F0",
+  "test5" : "#FF0",
+  "test6" : "#0FF",
+
+
   "color-main": "#555",
   "color-main-secondary": "#fafafa",
   "color-success": "#5cb85c",
