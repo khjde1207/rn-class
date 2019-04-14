@@ -1,19 +1,14 @@
 import React , {Component}from 'react';
-import  s from './Datas/styles';
-import colorData from './Datas/colors'
-
 import Conv from './Src/Conv'
 
-import { Text} from 'react-native';
 import _ from 'lodash' 
 import { isValidElementType  } from "react-is";
 
 
 
-let style = Object.assign({}, s , Conv.convColor(colorData));
-
 RNcomp = (Comp , props)=>{
-  let {cls} = props;
+  // let {cls} = props;
+  let stylesObj = Conv.convCls(props);
   // let arr = cls.split(",")
   
   // let aa = {style:[{...((clsStr)=>{
@@ -32,9 +27,9 @@ RNcomp = (Comp , props)=>{
   //   //   return {...style[str]} 
   //   // });
   // })(cls)}]};
-  console.log(style["f1"])
+  // console.log(style["f1"])
   return (
-    <Comp {...props} >{props.children}</Comp> 
+    <Comp {...props} {...stylesObj} >{props.children}</Comp> 
   )
 }
 
@@ -46,10 +41,6 @@ class rnClass{
 
   addComp(Comp){
     let self = this;
-    // console.log( "]][]]" ,isValidElementType(Comp)); 
-    // if(Comp.Icon){
-    //   console.log(Comp.Icon.render);
-    // }
     try {
       // console.log(Comp); 
       if(!isValidElementType(Comp)){

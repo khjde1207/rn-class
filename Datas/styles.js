@@ -190,6 +190,7 @@ export default {
   ...getFlex(),
   ...getExt(),
   ...getFornt(),
+
   "po-ab" : {position : "absolute"},
   "po-re" : {position : "relative"},
   "po-full" : {position : "absolute" , left : 0 , top : 0 , right : 0 , bottom : 0},
