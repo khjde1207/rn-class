@@ -72,6 +72,47 @@ C.addComp 시  두번째 인자에 name 를 추가 하여 UI 프레임 워크 �
 <C.NB.Text>
 ```
 
+Advanced skill : 
+![](https://github.com/khjde1207/rn-class/blob/master/imgs/ezgif-3-1b5bc7ae50f1.gif){: width="50%" height="50%"}{: .center}
+
+```
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View ,ScrollView ,TextInput} from 'react-native';
+
+import C from './rn-class/index'  
+
+C.addComp((props)=>{ 
+
+  if(props.SC){
+    return (<ScrollView {...props}></ScrollView>)
+  }
+
+
+  return <View {...props}></View>
+}, "V");   
+
+C.addComp((props)=>{ 
+  return <Text {...props}>Text</Text>
+}, "T");   
+
+
+export default App = ()=>{
+  arr = [];
+  for(var i = 0 ; i < 1000 ; i++){
+    arr .push(i);
+  }
+  return (
+    <C.V SC cls="po-full" >  
+      {
+        arr.map((data, idx  )=>{
+          return <C.T key={`test_1${idx}`} cls="f5 ta-c"></C.T>
+        })
+      }
+    </C.V>
+  )
+}
+```
+
 
 마진 / 패딩 옵션 설명. 
 
