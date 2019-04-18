@@ -1,6 +1,19 @@
 import _ from 'lodash' 
+import {clsMap ,mapCls} from './clsMap'  
+import  styles from '../Datas/styles';
+import colorData from '../Datas/colors'
 
+
+let style ;
 class Conv{
+  constructor(){
+
+    style = Object.assign({}, styles , this.convColor(colorData));
+
+  }
+  getStyle (){
+    return style;
+  }
   convColor(colors){ 
     let rtn = {};
     _.forEach(colors , (o, k )=>{
@@ -34,6 +47,24 @@ class Conv{
       rtn[`seldc-${k}`] = {selectedColor : o};
       rtn[k] = {color : o};
     })  
+    return rtn;
+  }
+
+  convCls(props){
+    let rtn = {};
+    _.forEach(props , (str, key)=>{
+      let clsKey = clsMap[key];
+      if(clsKey){
+        rtn[clsKey] = [];
+        let arr = str.split(" ")
+        _.forEach(arr , function (s) {
+          rtn[clsKey].push(style[s]);
+        });
+        Object.assign(rtn , props[clsKey]);
+        
+      }
+    });
+    // console.log(rtn)
     return rtn;
   }
 

@@ -1,17 +1,19 @@
 
-clsMap = {
+
+let clsMap = {
   //react-native Component 
-  cccls: "contentContainerStyle",
-  incls: "indicatorStyle",
-  colcls: "columnWrapperStyle",
-  imgcls: "imageStyle",
-  prcls : "presentationStyle",
-  itemcls : "itemStyle",
+	cls : "style",
+	cccls: "contentContainerStyle",
+	incls: "indicatorStyle",
+	colcls: "columnWrapperStyle",
+	imgcls: "imageStyle",
+	prcls : "presentationStyle",
+	itemcls : "itemStyle",
 
 
   //react-native-elements 
-  acls: "avatarStyle",
-	gbicls: "backgroundImageStyle",
+	acls: "avatarStyle",
+	bgicls: "backgroundImageStyle",
 	badgecls: "badgeStyle",
 	btncls: "buttonStyle",
 	ccls: "containerStyle",
@@ -27,7 +29,7 @@ clsMap = {
 	icls: "iconStyle",
 	iwcls: "imageWrapperStyle",
 	ibcls: "innerBorderStyle",
-	iccls: "inputContainerStyle",
+	
 	lcls: "labelStyle",
 	lccls: "leftContainerStyle",
 	liccls: "leftIconContainerStyle",
@@ -45,34 +47,56 @@ clsMap = {
 	tcls: "titleStyle",
 	tkcls: "trackStyle",
 	wcls: "wrapperStyle",
-  pccls: "PlaceholderContent",
+	pccls: "PlaceholderContent",
 
-  centerccls : "centerContainerStyle",
-  leftccls : "leftContainerStyle",
-  rightccls : "rightContainerStyle",
+	centerccls : "centerContainerStyle",
+	leftccls : "leftContainerStyle",
+	rightccls : "rightContainerStyle",
 
-  barcls: "barStyle",
+	barcls: "barStyle",
 	capcls: "captionStyle",
 	divcls: "dividerStyle",
 	imgccls: "imageContainerStyle",
 	inputcls: "inputStyle",
-  loadcls: "loadingStyle",
+	inputccls: "inputContainerStyle",
+
+	loadcls: "loadingStyle",
 	subtcls: "subtitleStyle",
-  textcls: "textStyle",
-  
-  //nativebase
-  hcls : "headerStyle",
-  cntcls : "contentStyle",
-  expcls : "expandedIconStyle",
-  tbulcls : "tabBarUnderlineStyle",
-  tabcls : "tabStyle",
-  atabcls : "activeTabStyle",
-  atcls : "activeTextStyle",
-  tccls : "tabsContainerStyle",
-  ulcls : "underlineStyle",
-  btntextcls : "buttonTextStyle",
+	textcls: "textStyle",
+
+	//nativebase
+	hcls : "headerStyle",
+	cntcls : "contentStyle",
+	expcls : "expandedIconStyle",
+	tbulcls : "tabBarUnderlineStyle",
+	tabcls : "tabStyle",
+	atabcls : "activeTabStyle",
+	atcls : "activeTextStyle",
+	tccls : "tabsContainerStyle",
+	ulcls : "underlineStyle",
+	btntextcls : "buttonTextStyle",
 
 };
+// let opMap = {};
+// for(key in clsMap){
+// 	opMap[key.replace("cls" , "op")] = clsMap[key];
+// } 
+let mapCls = {};
+for(key in clsMap){
+	mapCls[clsMap[key]] = key;
+}
+
+// Object.assign(clsMap , opMap, map);  
+// Object.assign(clsMap , map);  
+
+
+
+// let mapCls = clsConv();
+
+export{
+	clsMap ,
+	mapCls
+}
 // styleToCls  = {
 //   //react-native Component 
 //   contentContainerStyle: "cccls",
