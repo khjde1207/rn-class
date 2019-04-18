@@ -16,7 +16,7 @@ npm install --save https://github.com/khjde1207/rn-class
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import C from './rn-class/index'  
+import C from 'rn-class'
 C.addComp(Text);
 C.addComp(View);
 
@@ -36,7 +36,7 @@ or
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import C from './rn-class/index'  
+import C from 'rn-class'  // The name can be used with ease. example  : import ASDF from ''rn-class'
 import * as NB  from 'native-base';
 
 C.addComp(NB , "NB"); <--- If you only call it once in app.js, you can just use it after that.
@@ -65,6 +65,11 @@ export default App = ()=>{
     </C.NB.Container>
   )
 }
+```
+C.addComp 시  두번째 인자에 name 를 추가 하여 UI 프레임 워크 충돌을 방지 할 수 있다. 
+```
+<Text>
+<C.NB.Text>
 ```
 
 
