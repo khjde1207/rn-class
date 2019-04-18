@@ -74,8 +74,6 @@ C.addComp 시  두번째 인자에 name 를 추가 하여 UI 프레임 워크 �
 
 Advanced skill : 
 
-![](https://github.com/khjde1207/rn-class/blob/master/imgs/ezgif-3-1b5bc7ae50f1.gif?raw=true)
-
 ```
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View ,ScrollView ,TextInput} from 'react-native';
