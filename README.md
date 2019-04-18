@@ -195,6 +195,6 @@ phic-[colorName] = {placeholderIconColor : o}//ios
 tdc-[colorName] = {textDecorationColor : o}; //ios
 colorName = {color : o};
 
-https://github.com/khjde1207/rn-class/blob/master/Src/colors.js
+https://github.com/khjde1207/rn-class/blob/master/Datas/colors.js
 
 Transforms
