@@ -73,6 +73,7 @@ C.addComp 시  두번째 인자에 name 를 추가 하여 UI 프레임 워크 �
 ```
 
 Advanced skill : 
+
 ![](https://github.com/khjde1207/rn-class/blob/master/imgs/ezgif-3-1b5bc7ae50f1.gif){: width="50%" height="50%"}{: .center}
 
 ```
