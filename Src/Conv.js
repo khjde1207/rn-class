@@ -64,7 +64,7 @@ class Conv{
         
       }
     });
-    // console.log(rtn)
+    // console.log(rtn);
     return rtn;
   }
 

@@ -194,7 +194,7 @@ export default {
   "po-ab" : {position : "absolute"},
   "po-re" : {position : "relative"},
   "po-full" : {position : "absolute" , left : 0 , top : 0 , right : 0 , bottom : 0},
-
+  "po-fulla" : {position : "absolute" , left : 0 , top : 0 , width : wp(100) , height : hp(100)},
   "ac-s" : {alignContent : 'flex-start'},
   "ac-e" : {alignContent : 'flex-end'},
   "ac-c" : {alignContent : 'center'},

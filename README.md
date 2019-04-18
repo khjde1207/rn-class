@@ -2,6 +2,69 @@ react-native 에 스타일을 쉽게 쓸수 있게 만든 프로젝트
 
 react-native-responsive-screen 을 이용하여 모든 디바이스 에 동일한 style 를 사용 가능 할꺼라고 기대함. 
 
+    install 
+
+```
+npm install --save rn-class 
+or 
+npm install --save https://github.com/khjde1207/rn-class
+```
+
+    use 
+
+```
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
+
+import C from './rn-class/index'  
+C.addComp(Text);
+C.addComp(View);
+
+export default App = ()=>{
+  return (
+    <C.View cls="ai-c jc-c po-fulla"> 
+      <C.Text cls="f4">Test</C.Text>
+    </C.View>
+  )
+}
+```
+
+or 
+
+```
+
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
+
+import C from './rn-class/index'  
+import * as NB  from 'native-base';
+
+
+export default App = ()=>{
+  return (
+    <C.NB.Container>
+      <C.NB.Header />
+      <C.NB.Content>
+        <C.NB.Card>
+              <C.NB.CardItem header>
+                <C.NB.Text>NativeBase</C.NB.Text>
+              </C.NB.CardItem>
+              <C.NB.CardItem>
+                <C.NB.Body>
+                  <C.NB.Text>
+                    //Your text here
+                  </C.NB.Text>
+                </C.NB.Body>
+              </C.NB.CardItem>
+              <C.NB.CardItem footer>
+                <C.NB.Text>GeekyAnts</C.NB.Text>
+              </C.NB.CardItem>
+          </C.NB.Card>
+      </C.NB.Content>
+    </C.NB.Container>
+  )
+}
+```
 
 
 마진 / 패딩 옵션 설명. 
@@ -124,6 +187,8 @@ flxs : flexShrink
 "po-re" : {position : "relative"},
 
 "po-full" : {position : "absolute" , left : 0 , top : 0 , right : 0 , bottom : 0},
+
+"po-fulla" : {position : "absolute" , left : 0 , top : 0 , width : wp(100) , height : hp(100)},
 
 "ac-s" : {alignContent : 'flex-start'},
 

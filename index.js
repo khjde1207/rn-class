@@ -39,8 +39,13 @@ class rnClass{
     
   }
 
-  addComp(Comp){
-    let self = this;
+  addComp(Comp , asName){
+    
+    let target =  this;
+    if(asName){
+      !target[asName]  && (target[asName] = {}); 
+      target = target[asName];
+    }
     try {
       // console.log(Comp); 
       if(!isValidElementType(Comp)){
@@ -48,22 +53,27 @@ class rnClass{
           if(isValidElementType(c)){
             if(_.isArray(Comp)){
               
-              self[c.displayName] = RNcomp.bind(null,c);        
+              target[c.displayName] = RNcomp.bind(null,c);        
             }else{
-              self[k] = RNcomp.bind(null,c);        
+              target[k] = RNcomp.bind(null,c);        
             } 
           }
         })
       }else{
         if(isValidElementType(Comp)){
-          self[Comp.displayName] = RNcomp.bind(null,Comp);
+          target[Comp.displayName] = RNcomp.bind(null,Comp);
         }
       }
     } catch (error) {
       console.log(error);
     }
+    // if(asName){
+    //   console.log(asName); 
+    //   console.log(Object.keys(this[asName]) );    
+    // }
+      
     // console.log(this);       
-
+    
   }
 
 
