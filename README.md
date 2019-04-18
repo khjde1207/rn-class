@@ -39,6 +39,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import C from './rn-class/index'  
 import * as NB  from 'native-base';
 
+C.addComp(NB , "NB"); <--- If you only call it once in app.js, you can just use it after that.
 
 export default App = ()=>{
   return (
