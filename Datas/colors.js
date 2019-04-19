@@ -7,7 +7,7 @@ export default {
   "test5" : "#FF0",
   "test6" : "#0FF",
 
-  "color-tranparent" : "#FFF0",
+  "color-transparent" : "#FFF0",
   "color-main": "#555",
   "color-main-secondary": "#fafafa",
   "color-success": "#5cb85c",
