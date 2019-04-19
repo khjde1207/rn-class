@@ -181,38 +181,38 @@ b[idx]: {bottom:  [idx]}
 
 
 
-    border : 
+    border : 0~20
 bw : {borderWidth : }
 
-bb : {borderBottomWidth : }
+bbw : {borderBottomWidth : }
 
-bt : {borderTopWidth : }
+btw : {borderTopWidth : }
 
-be : {borderEndWidth : }
+bew : {borderEndWidth : }
 
-bl : {borderLeftWidth : }
+blw : {borderLeftWidth : }
 
-br : {borderRightWidth : }
+brw : {borderRightWidth : }
 
-bs : {borderStartWidth : }
+bsw : {borderStartWidth : }
 
-r-be : {borderBottomEndRadius:};
+br-be : {borderBottomEndRadius:};
 
-r-bl : {borderBottomLeftRadius:};
+br-bl : {borderBottomLeftRadius:};
 
-r-br : {borderBottomRightRadius:};
+br-br : {borderBottomRightRadius:};
 
-r-bs : {borderBottomStartRadius:};
+br-bs : {borderBottomStartRadius:};
 
-r-te : {borderTopEndRadius:};
+br-te : {borderTopEndRadius:};
 
-r-tl : {borderTopLeftRadius:};
+br-tl : {borderTopLeftRadius:};
 
-r-tr : {borderTopRightRadius:};
+br-tr : {borderTopRightRadius:};
 
-r-ts : {borderTopStartRadius:};
+br-ts : {borderTopStartRadius:};
 
-r-b : {borderRadius:};
+br : {borderRadius:};
 
 sdo-r  = {shadowRadius:};
 

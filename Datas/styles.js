@@ -112,28 +112,29 @@ function getSize () {
 }
 function getBorder () {
   let rtn = {};
-  for(var i = 0 ; i <= 100 ; i++){
-    rtn[`bw${i}`] = {borderWidth : wp(i)}
-    rtn[`bb${i}`] = {borderBottomWidth : wp(i)}
-    rtn[`bt${i}`] = {borderTopWidth : wp(i)}
-    rtn[`be${i}`] = {borderEndWidth : wp(i)}
-    rtn[`bl${i}`] = {borderLeftWidth : wp(i)}
-    rtn[`br${i}`] = {borderRightWidth : wp(i)}
-    rtn[`bs${i}`] = {borderStartWidth : wp(i)}
+  for(var i = 0 ; i <= 20 ; i+=0.1){
+    let idx = `${Number.parseInt(i)}`
+    rtn[`bw${idx}`] = {borderWidth : wp(idx)}
+    rtn[`bbw${idx}`] = {borderBottomWidth : wp(idx)}
+    rtn[`btw${idx}`] = {borderTopWidth : wp(idx)}
+    rtn[`bew${idx}`] = {borderEndWidth : wp(idx)}
+    rtn[`blw${idx}`] = {borderLeftWidth : wp(idx)}
+    rtn[`brw${idx}`] = {borderRightWidth : wp(idx)}
+    rtn[`bsw${idx}`] = {borderStartWidth : wp(idx)}
 
-    rtn[`r-be${i}`] = {borderBottomEndRadius:hp(i)};
-    rtn[`r-bl${i}`] = {borderBottomLeftRadius:hp(i)};
-    rtn[`r-br${i}`] = {borderBottomRightRadius:hp(i)};
-    rtn[`r-bs${i}`] = {borderBottomStartRadius:hp(i)};
-    rtn[`r-te${i}`] = {borderTopEndRadius:hp(i)};
-    rtn[`r-tl${i}`] = {borderTopLeftRadius:hp(i)};
-    rtn[`r-tr${i}`] = {borderTopRightRadius:hp(i)};
-    rtn[`r-ts${i}`] = {borderTopStartRadius:hp(i)};
-    rtn[`r-b${i}`]  = {borderRadius:hp(i)};
+    rtn[`br-be${idx}`] = {borderBottomEndRadius:hp(idx)};
+    rtn[`br-bl${idx}`] = {borderBottomLeftRadius:hp(idx)};
+    rtn[`br-br${idx}`] = {borderBottomRightRadius:hp(idx)};
+    rtn[`br-bs${idx}`] = {borderBottomStartRadius:hp(idx)};
+    rtn[`br-te${idx}`] = {borderTopEndRadius:hp(idx)};
+    rtn[`br-tl${idx}`] = {borderTopLeftRadius:hp(idx)};
+    rtn[`br-tr${idx}`] = {borderTopRightRadius:hp(idx)};
+    rtn[`br-ts${idx}`] = {borderTopStartRadius:hp(idx)};
+    rtn[`br${idx}`]  = {borderRadius:hp(idx)};
 
-    rtn[`sdo-r${i}`]  = {shadowRadius:hp(i)};
+    rtn[`sdo-r${idx}`]  = {shadowRadius:hp(idx)};
 
-    rtn[`tsdo-r${i}`]  = {textShadowRadius:hp(i)};
+    rtn[`tsdo-r${idx}`]  = {textShadowRadius:hp(idx)};
     
   }
 
@@ -144,16 +145,16 @@ function getFlex(){
   let rtn = {};
   for(var i = 0 ; i <= 10 ; i++){
     rtn[`flx${i}`] = {flex : i};
-    rtn[`flx-${i}`] = {flex : i/10};
+    rtn[`flx${i/10}`] = {flex : i/10};
     
     rtn[`flxb${i}`] = {flexBasis : i};
-    rtn[`flxb-${i}`] = {flexBasis : i/10};
+    rtn[`flxb${i/10}`] = {flexBasis : i/10};
 
     rtn[`flxg${i}`] = {flexGrow : i};
-    rtn[`flxg-${i}`] = {flexGrow : i/10};
+    rtn[`flxg${i/10}`] = {flexGrow : i/10}; 
 
     rtn[`flxs${i}`] = {flexShrink : i};
-    rtn[`flxs-${i}`] = {flexShrink : i/10};
+    rtn[`flxs${i/10}`] = {flexShrink : i/10};
   }
   return rtn;
 }
