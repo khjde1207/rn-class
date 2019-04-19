@@ -113,7 +113,7 @@ function getSize () {
 function getBorder () {
   let rtn = {};
   for(var i = 0 ; i <= 20 ; i+=0.1){
-    let idx = `${Number.parseInt(i)}`
+    let idx = i.toFixed(1);
     rtn[`bw${idx}`] = {borderWidth : wp(idx)}
     rtn[`bbw${idx}`] = {borderBottomWidth : wp(idx)}
     rtn[`btw${idx}`] = {borderTopWidth : wp(idx)}
@@ -140,6 +140,7 @@ function getBorder () {
 
   return rtn;
 }
+
 
 function getFlex(){
   let rtn = {};
@@ -188,6 +189,7 @@ export default {
   ...getMarginPadding(),
   ...getSize(),
   ...getBorder(),
+
   ...getFlex(),
   ...getExt(),
   ...getFornt(),
