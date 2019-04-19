@@ -7,7 +7,7 @@ export default {
   "test5" : "#FF0",
   "test6" : "#0FF",
 
-
+  "color-tranparent" : "#FFF0",
   "color-main": "#555",
   "color-main-secondary": "#fafafa",
   "color-success": "#5cb85c",
@@ -206,6 +206,7 @@ export default {
   "rgba-bluegray-0_3": "rgba(88, 95, 105, 0.3)",
   "rgba-bluegray-0_5": "rgba(88, 95, 105, 0.5)",
   "rgba-bluegray-0_7": "rgba(88, 95, 105, 0.7)",
+  
 
   
 }
