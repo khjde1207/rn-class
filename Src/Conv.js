@@ -67,8 +67,8 @@ class Conv{
     // console.log(rtn);
     return rtn;
   }
-  get(name){
-    return style[name];
+  n2Cls(name){
+    return this.convCls({cls : name}).style;
   }
 
 
