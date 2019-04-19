@@ -218,8 +218,8 @@ export default {
   "dp-flx" : {display : "flex"},
   "dp-none" : {display : "none"},
 
-  "flx-col" : {flexDirection : "row"},
-  "flx-row" : {flexDirection : "column"},
+  "flx-col" : {flexDirection : "column"},
+  "flx-row" : {flexDirection : "row"},
   "flx-colr" : {flexDirection : "row-reverse"},
   "flx-rowr" : {flexDirection : "column-reverse"},
 
