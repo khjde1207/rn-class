@@ -67,7 +67,10 @@ class rnClass{
     
   }
   cls (props){
-    return Conv.convCls(props);;
+    return Conv.convCls(props);
+  }
+  get (propName){
+    return Conv.get(propName);
   }
 
 

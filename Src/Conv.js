@@ -67,6 +67,9 @@ class Conv{
     // console.log(rtn);
     return rtn;
   }
+  get(name){
+    return style[name];
+  }
 
 
 }
