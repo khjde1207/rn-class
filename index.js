@@ -14,7 +14,7 @@ RNcomp = (Comp , props)=>{
     <Comp {...props} {...stylesObj} >{props.children}</Comp> 
   )
 }
-let ignoreKey ={"BackAndroid" : ""}
+let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage"];
 class rnClass{
   // Component = {};
   
@@ -33,16 +33,19 @@ class rnClass{
     try {
       // console.log(Comp); 
       if(!isValidElementType(Comp)){
-        _.forEach(Comp,function(c , k){
-          if(ignoreKey[k]){return;}
-          if(isValidElementType(c)){
-            if(_.isArray(Comp)){
-              target[c.displayName] = RNcomp.bind(null,c);        
-            }else{
-              target[k] = RNcomp.bind(null,c);        
-            } 
-          }
-        })
+        for (k in Comp){
+          try {
+            if(_.indexOf(ignoreKeys , k) >= 0 ){continue;}
+            c = Comp[k];
+            if(isValidElementType(c)){
+              if(_.isArray(Comp)){
+                target[c.displayName] = RNcomp.bind(null,c);        
+              }else{
+                target[k] = RNcomp.bind(null,c);        
+              } 
+            }
+          }catch (error) {}
+        }
       }else{
           if(asName){
             this[asName]  = RNcomp.bind(null,Comp);
