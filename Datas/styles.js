@@ -141,21 +141,21 @@ function getBorder () {
   return rtn;
 }
 
-
 function getFlex(){
   let rtn = {};
   for(var i = 0 ; i <= 10 ; i++){
     rtn[`flx${i}`] = {flex : i};
-    rtn[`flx${i/10}`] = {flex : i/10};
+    
+    i <10 && (rtn[`flx${i/10}`] = {flex : i/10});
     
     rtn[`flxb${i}`] = {flexBasis : i};
-    rtn[`flxb${i/10}`] = {flexBasis : i/10};
+    i <10 && (rtn[`flxb${i/10}`] = {flexBasis : i/10});
 
     rtn[`flxg${i}`] = {flexGrow : i};
-    rtn[`flxg${i/10}`] = {flexGrow : i/10}; 
+    i <10 && (rtn[`flxg${i/10}`] = {flexGrow : i/10}); 
 
     rtn[`flxs${i}`] = {flexShrink : i};
-    rtn[`flxs${i/10}`] = {flexShrink : i/10};
+    i <10 && (rtn[`flxs${i/10}`] = {flexShrink : i/10}); 
   }
   return rtn;
 }
