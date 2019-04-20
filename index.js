@@ -1,25 +1,23 @@
-import React , {Component}from 'react';
+import React , {Component , forwardRef}from 'react';
 import Conv from './Src/Conv'
 
 import _ from 'lodash' 
 import { isValidElementType  } from "react-is";
 
+import { View} from 'react-native';
 
+let RNcomp = (Component)=>{
+  return  forwardRef((props, ref)=>{
+      let stylesObj = Conv.convCls(props);
+      return <Component ref={ref} {...props} {...stylesObj}>{props.children}</Component>
+  })
 
-RNcomp = (Comp , props)=>{
-
-  let stylesObj = Conv.convCls(props);
-
-  return (
-    <Comp {...props} {...stylesObj} >{props.children}</Comp> 
-  )
 }
 let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage"];
 class rnClass{
-  // Component = {};
   
   constructor(){
-    this.Conv = Conv; 
+    this.Conv = Conv;  
   }
   
   addComp(Comp , asName){
@@ -36,34 +34,31 @@ class rnClass{
         for (k in Comp){
           try {
             if(_.indexOf(ignoreKeys , k) >= 0 ){continue;}
-            c = Comp[k];
+            let c = Comp[k];
+            
             if(isValidElementType(c)){
               if(_.isArray(Comp)){
-                target[c.displayName] = RNcomp.bind(null,c);        
+                
+                 target[c.displayName] =RNcomp(c);                 
+                 
               }else{
-                target[k] = RNcomp.bind(null,c);        
+                target[k] = RNcomp(c);        
+               
               } 
             }
           }catch (error) {}
         }
       }else{
           if(asName){
-            this[asName]  = RNcomp.bind(null,Comp);
+            this[asName]  = RNcomp(Comp) //RNcomp.bind(null,Comp);
           }else{
-            target[Comp.displayName] = RNcomp.bind(null,Comp);
+            target[Comp.displayName] =RNcomp(Comp);
             
           }
       }
     } catch (error) {
       console.log(error);
     }
-    // console.log(this[asName], "등록 >>>>>>>>>>> " , asName); 
-    // if(asName){
-      //   console.log(asName); 
-    //   console.log(Object.keys(this[asName]) );    
-    // }
-      
-    // console.log(this);       
     
   }
   cls (props){
