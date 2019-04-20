@@ -64,8 +64,15 @@ class Conv{
         
       }
     });
-    // console.log(rtn)
+    // console.log(rtn);
     return rtn;
+  }
+  n2Cls(name){
+    let rtn = this.convCls({cls : name});
+    if(rtn.style.length > 1){
+      return this.convCls({cls : name}).style;   
+    } 
+    return this.convCls({cls : name}).style[0];
   }
 
 

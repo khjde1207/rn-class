@@ -7,63 +7,70 @@ import { isValidElementType  } from "react-is";
 
 
 RNcomp = (Comp , props)=>{
-  // let {cls} = props;
-  let stylesObj = Conv.convCls(props);
-  // let arr = cls.split(",")
-  
-  // let aa = {style:[{...((clsStr)=>{
-    
-  //   var arr = clsStr.split(" ");
-  //   var rtnArr = [];
-  //   for(var i = 0 ; i <arr.length ; i++){
-  //     rtnArr.push(style[arr[i]] ) 
-  //   }
-  //   return rtnArr;
-  //   // // console.log(style);
-  //   // console.log(rtnArr);
 
-  //   // for()
-  //   //  var s = _.map(arr , (str)=>{
-  //   //   return {...style[str]} 
-  //   // });
-  // })(cls)}]};
-  // console.log(style["f1"])
+  let stylesObj = Conv.convCls(props);
+
   return (
     <Comp {...props} {...stylesObj} >{props.children}</Comp> 
   )
 }
-
+let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage"];
 class rnClass{
   // Component = {};
+  
   constructor(){
-    
+    this.Conv = Conv; 
   }
-
-  addComp(Comp){
-    let self = this;
+  
+  addComp(Comp , asName){
+    
+    let target =  this;
+    if(asName){
+      !target[asName]  && (target[asName] = {}); 
+      target = target[asName];
+      
+    } 
     try {
       // console.log(Comp); 
       if(!isValidElementType(Comp)){
-        _.forEach(Comp,function(c , k){
-          if(isValidElementType(c)){
-            if(_.isArray(Comp)){
-              
-              self[c.displayName] = RNcomp.bind(null,c);        
-            }else{
-              self[k] = RNcomp.bind(null,c);        
-            } 
-          }
-        })
-      }else{
-        if(isValidElementType(Comp)){
-          self[Comp.displayName] = RNcomp.bind(null,Comp);
+        for (k in Comp){
+          try {
+            if(_.indexOf(ignoreKeys , k) >= 0 ){continue;}
+            c = Comp[k];
+            if(isValidElementType(c)){
+              if(_.isArray(Comp)){
+                target[c.displayName] = RNcomp.bind(null,c);        
+              }else{
+                target[k] = RNcomp.bind(null,c);        
+              } 
+            }
+          }catch (error) {}
         }
+      }else{
+          if(asName){
+            this[asName]  = RNcomp.bind(null,Comp);
+          }else{
+            target[Comp.displayName] = RNcomp.bind(null,Comp);
+            
+          }
       }
     } catch (error) {
       console.log(error);
     }
+    // console.log(this[asName], "등록 >>>>>>>>>>> " , asName); 
+    // if(asName){
+      //   console.log(asName); 
+    //   console.log(Object.keys(this[asName]) );    
+    // }
+      
     // console.log(this);       
-
+    
+  }
+  cls (props){
+    return Conv.convCls(props);
+  }
+  n2cls (propName){
+    return Conv.n2Cls(propName);
   }
 
 
