@@ -55,12 +55,12 @@ getMarginPadding = ()=>{
 
     rtn[`zidx${idx}`] = {zIndex : idx}
 
-    rtn[`sdof${idx}`] = {shadowOffset : {width : wp(idx) , height : hp(idx) }}
-    rtn[`txt-sdof${idx}`] = {shadowOffset : {width : wp(idx) , height : hp(idx) }}
+    rtn[`sdof${idx}`] = {shadowOffset : {width : idx , height : idx }}
+    rtn[`txt-sdof${idx}`] = {shadowOffset : {width : idx , height : idx }}
     for(let y = -30 ; y <= 30 ; y+= 0.2){
       let hidx = Math.round(y);
-      rtn[`sdof_${idx}_${hidx}`] = {shadowOffset : {width : wp(idx) , height : hp(hidx)}};
-      rtn[`txt-sdof_${idx}_${hidx}`] = {shadowOffset : {width : wp(idx) , height : hp(hidx)}};
+      rtn[`sdof_${idx}_${hidx}`] = {shadowOffset : {width : idx , height : hidx}};
+      rtn[`txt-sdof_${idx}_${hidx}`] = {shadowOffset : {width : idx , height : hidx}};
     }
     
   }
@@ -113,7 +113,7 @@ function getSize () {
 function getBorder () {
   let rtn = {};
   for(var i = 0 ; i <= 20 ; i+=0.1){
-    let idx = i.toFixed(1);
+    let idx = i.toFixed(1).replace(".0","");
     rtn[`bw${idx}`] = {borderWidth : wp(idx)}
     rtn[`bbw${idx}`] = {borderBottomWidth : wp(idx)}
     rtn[`btw${idx}`] = {borderTopWidth : wp(idx)}
@@ -143,7 +143,7 @@ function getBorder () {
 
 function getFlex(){
   let rtn = {};
-  for(var i = 0 ; i <= 10 ; i++){
+  for(var i = 1 ; i <= 10 ; i++){
     rtn[`flx${i}`] = {flex : i};
     
     i <10 && (rtn[`flx${i/10}`] = {flex : i/10});
@@ -155,7 +155,7 @@ function getFlex(){
     i <10 && (rtn[`flxg${i/10}`] = {flexGrow : i/10}); 
 
     rtn[`flxs${i}`] = {flexShrink : i};
-    i <10 && (rtn[`flxs${i/10}`] = {flexShrink : i/10}); 
+    i <10 && (rtn[`flxs${i/10}`] = {flexShrink : i/10});
   }
   return rtn;
 }
