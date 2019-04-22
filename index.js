@@ -3,8 +3,8 @@ import Conv from './Src/Conv'
 
 import _ from 'lodash' 
 import { isValidElementType  } from "react-is";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-import { View} from 'react-native';
 
 let RNcomp = (Component)=>{
   return  forwardRef((props, ref)=>{
@@ -14,8 +14,11 @@ let RNcomp = (Component)=>{
 
 }
 let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage"];
+
+
 class rnClass{
-  
+  wp = wp;
+  hp = hp;
   constructor(){
     this.Conv = Conv;  
   }
@@ -71,7 +74,9 @@ class rnClass{
 
   
 }  
-
+export {
+  wp,hp
+}
 export default (new rnClass)
 
 // export default ;
