@@ -60,11 +60,12 @@ class Conv{
         _.forEach(arr , function (s) {
           rtn[clsKey].push(style[s]);
         });
-        Object.assign(rtn , props[clsKey]);
+        rtn[clsKey].push(props[clsKey]); 
+        // Object.assign(rtn , props[clsKey]);
         
       }
     });
-    // console.log(rtn);
+    // console.log(rtn); 
     return rtn;
   }
   n2Cls(name){
