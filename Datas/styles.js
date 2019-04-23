@@ -68,7 +68,7 @@ getMarginPadding = ()=>{
 }
 function getSize () {
   let rtn = {};
-  for(var i = 0 ; i <= 100 ; i++){
+  for(var i = -100 ; i <= 200 ; i++){
     rtn[`h${i}`] = {height : hp(i)};
     rtn[`w${i}`] = {width : wp(i)};
     rtn[`h-w${i}`] = {height : wp(i)};
