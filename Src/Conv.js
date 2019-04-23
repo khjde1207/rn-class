@@ -60,7 +60,7 @@ class Conv{
         _.forEach(arr , function (s) {
           rtn[clsKey].push(style[s]);
         });
-        rtn[clsKey].push(props[clsKey]); 
+        props[clsKey] && rtn[clsKey].push(props[clsKey]); 
         // Object.assign(rtn , props[clsKey]);
         
       }
