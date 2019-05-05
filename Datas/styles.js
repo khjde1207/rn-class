@@ -161,7 +161,8 @@ function getFlex(){
 }
 function getFornt(){
   let rtn = {};
-  for(var i = 0 ; i <= 100 ; i++){
+  for(var i = 0 ; i <= 100 ; i=+0.1){
+    let idx = i.toFixed(1).replace(".0","");
     rtn[`f${i}`] = {fontSize : hp(i)};
     rtn[`lh${i}`] = {lineHeight : hp(i)};
 

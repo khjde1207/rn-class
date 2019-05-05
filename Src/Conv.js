@@ -26,6 +26,7 @@ class Conv{
       rtn[`bsc-${k}`] = {borderStartColor :o }
       rtn[`bec-${k}`] = {borderEndColor :o }
       rtn[`tsdoc-${k}`] = {textShadowColor : o};
+      rtn[`sdoc-${k}`] = {shadowColor : o};
       rtn[`tint-${k}`] = {tintColor : o};
       rtn[`selc-${k}`] = {selectionColor : o};
       rtn[`tdc-${k}`] = {textDecorationColor : o};
