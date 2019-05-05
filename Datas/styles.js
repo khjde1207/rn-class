@@ -159,9 +159,9 @@ function getFlex(){
   }
   return rtn;
 }
-function getFornt(){
+function getFont(){
   let rtn = {};
-  for(var i = 0 ; i <= 100 ; i=+0.1){
+  for(var i = 0 ; i <= 100 ; i += 0.1){
     let idx = i.toFixed(1).replace(".0","");
     rtn[`f${idx}`] = {fontSize : hp(idx)};
     rtn[`lh${idx}`] = {lineHeight : hp(idx)};
@@ -193,7 +193,7 @@ export default {
 
   ...getFlex(),
   ...getExt(),
-  ...getFornt(),
+  ...getFont(),
 
   "po-ab" : {position : "absolute"},
   "po-re" : {position : "relative"},
