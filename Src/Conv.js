@@ -29,7 +29,7 @@ class Conv{
       rtn[`sdoc-${k}`] = {shadowColor : o};
       rtn[`tint-${k}`] = {tintColor : o};
       rtn[`selc-${k}`] = {selectionColor : o};
-      rtn[`tdc-${k}`] = {textDecorationColor : o};
+      rtn[`tdc-${k}`] = {textDecoratiojnColor : o};
       rtn[`phtc-${k}`] ={placeholderTextColor : o};
       rtn[`subtc-${k}`] ={subtitleColor : o};
       rtn[`tc-${k}`] = {titleColor : o};
