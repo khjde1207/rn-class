@@ -23,7 +23,7 @@ class rnClass{
     this.Conv = Conv;  
   }
   
-  addComp(Comp , asName){
+  addComp(Comp , asName, defaultName){
     
     let target =  this;
     if(asName){
@@ -45,7 +45,7 @@ class rnClass{
                  target[c.displayName] =RNcomp(c);                 
                  
               }else{
-                if(k == "default" && c.displayName){
+                if(k == "default" && defaultName){
                   target[c.displayName] = RNcomp(c);                 
                 }else{
                   target[k] = RNcomp(c);        
