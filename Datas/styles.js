@@ -172,7 +172,7 @@ function getFont(){
 }
 function getExt(){
   let rtn = [];
-  for(var i = 0 ; i < 30 ; i++){
+  for(var i = 0 ; i < 100 ; i++){
     rtn[`size${i}`] =  {size : wp(i)};
     rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
 
