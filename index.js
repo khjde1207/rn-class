@@ -29,7 +29,7 @@ class rnClass{
     if(asName){
       !target[asName]  && (target[asName] = {}); 
       target = target[asName];
-      
+       
     } 
     try {
       // console.log(Comp); 
