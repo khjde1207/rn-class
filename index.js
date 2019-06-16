@@ -46,7 +46,7 @@ class rnClass{
                  
               }else{
                 if(k == "default" && defaultName){
-                  target[c.displayName] = RNcomp(c);                 
+                  target[defaultName] = RNcomp(c);                 
                 }else{
                   target[k] = RNcomp(c);        
                 }
