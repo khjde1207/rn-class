@@ -75,7 +75,16 @@ let clsMap = {
 	tccls : "tabsContainerStyle",
 	ulcls : "underlineStyle",
 	btntextcls : "buttonTextStyle",
-
+	//react-native-router-flux
+	bbtcls : "backButtonTextStyle",
+	lbicls : "leftButtonIconStyle",
+	lbcls : "leftButtonStyle",
+	lbycls : "leftButtonTextStyle",
+	nbcls : "navigationBarStyle",
+	nbticls : "navigationBarTitleImageStyle",
+	rbcls : "rightButtonStyle",
+	rbtcls : "rightButtonTextStyle",
+	tabbcls : "tabBarStyle",
 };
 // let opMap = {};
 // for(key in clsMap){
