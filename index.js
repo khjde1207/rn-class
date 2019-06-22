@@ -29,7 +29,7 @@ class rnClass{
     if(asName){
       !target[asName]  && (target[asName] = {}); 
       target = target[asName];
-      
+       
     } 
     try {
       // console.log(Comp); 
@@ -46,7 +46,7 @@ class rnClass{
                  
               }else{
                 if(k == "default" && defaultName){
-                  target[c.displayName] = RNcomp(c);                 
+                  target[defaultName] = RNcomp(c);                 
                 }else{
                   target[k] = RNcomp(c);        
                 }
