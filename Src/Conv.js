@@ -15,7 +15,7 @@ class Conv{
     return style;
   }
   addColor(color, name){
-    let v = [{}];
+    let v = {};
     v[name] = color;
     style = Object.assign({}, style , this.convColor(v));    
   }
