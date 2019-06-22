@@ -14,6 +14,11 @@ class Conv{
   getStyle (){
     return style;
   }
+  addColor(color, name){
+    let v = [{}];
+    v[name] = color;
+    style = Object.assign({}, style , this.convColor(v));    
+  }
   convColor(colors){ 
     let rtn = {};
     _.forEach(colors , (o, k )=>{

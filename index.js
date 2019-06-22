@@ -74,7 +74,9 @@ class rnClass{
   n2cls (propName){
     return Conv.n2Cls(propName);
   }
-
+  addColor(color, name){
+    return Conv.addColor(color, name);   
+  }
 
   
 }  
