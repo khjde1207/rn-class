@@ -13,7 +13,7 @@ let RNcomp = (Component)=>{
   })
 
 }
-let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage"];
+let ignoreKeys =["BackAndroid", "ImageStore", "MaskedViewIOS","Slider","ListView","ViewPagerAndroid","WebView","AlertIOS","NetInfo", "SwipeableListView", "AsyncStorage", "CameraRoll", "PushNotificationIOS"];
 
 
 class rnClass{
