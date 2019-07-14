@@ -175,6 +175,7 @@ function getExt(){
   for(var i = 0 ; i < 100 ; i++){
     rtn[`size${i}`] =  {size : wp(i)};
     rtn[`tlsp${i}`] = {letterSpacing : wp(i)};
+    rtn[`el${i}`] = {elevation : i}
 
   }
   for(var i = 0 ; i < 1 ; i+=0.1){
