@@ -114,27 +114,27 @@ function getBorder () {
   let rtn = {};
   for(var i = 0 ; i <= 20 ; i+=0.1){
     let idx = i.toFixed(1).replace(".0","");
-    rtn[`bw${idx}`] = {borderWidth : wp(idx)}
-    rtn[`bbw${idx}`] = {borderBottomWidth : wp(idx)}
-    rtn[`btw${idx}`] = {borderTopWidth : wp(idx)}
-    rtn[`bew${idx}`] = {borderEndWidth : wp(idx)}
-    rtn[`blw${idx}`] = {borderLeftWidth : wp(idx)}
-    rtn[`brw${idx}`] = {borderRightWidth : wp(idx)}
-    rtn[`bsw${idx}`] = {borderStartWidth : wp(idx)}
+    rtn[`bw${idx}`] = {borderWidth : i}
+    rtn[`bbw${idx}`] = {borderBottomWidth : i}
+    rtn[`btw${idx}`] = {borderTopWidth : i}
+    rtn[`bew${idx}`] = {borderEndWidth : i}
+    rtn[`blw${idx}`] = {borderLeftWidth : i}
+    rtn[`brw${idx}`] = {borderRightWidth : i}
+    rtn[`bsw${idx}`] = {borderStartWidth : i}
 
-    rtn[`br-be${idx}`] = {borderBottomEndRadius:wp(idx)};
-    rtn[`br-bl${idx}`] = {borderBottomLeftRadius:wp(idx)};
-    rtn[`br-br${idx}`] = {borderBottomRightRadius:wp(idx)};
-    rtn[`br-bs${idx}`] = {borderBottomStartRadius:wp(idx)};
-    rtn[`br-te${idx}`] = {borderTopEndRadius:wp(idx)};
-    rtn[`br-tl${idx}`] = {borderTopLeftRadius:wp(idx)};
-    rtn[`br-tr${idx}`] = {borderTopRightRadius:wp(idx)};
-    rtn[`br-ts${idx}`] = {borderTopStartRadius:wp(idx)};
-    rtn[`br${idx}`]  = {borderRadius:wp(idx)};
+    rtn[`br-be${idx}`] = {borderBottomEndRadius:i};
+    rtn[`br-bl${idx}`] = {borderBottomLeftRadius:i};
+    rtn[`br-br${idx}`] = {borderBottomRightRadius:i};
+    rtn[`br-bs${idx}`] = {borderBottomStartRadius:i};
+    rtn[`br-te${idx}`] = {borderTopEndRadius:i};
+    rtn[`br-tl${idx}`] = {borderTopLeftRadius:i};
+    rtn[`br-tr${idx}`] = {borderTopRightRadius:i};
+    rtn[`br-ts${idx}`] = {borderTopStartRadius:i};
+    rtn[`br${idx}`]  = {borderRadius:i};
 
-    rtn[`sdo-r${idx}`]  = {shadowRadius:wp(idx)};
+    rtn[`sdo-r${idx}`]  = {shadowRadius:i};
 
-    rtn[`tsdo-r${idx}`]  = {textShadowRadius:wp(idx)};
+    rtn[`tsdo-r${idx}`]  = {textShadowRadius:i};
     
   }
 
