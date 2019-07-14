@@ -112,7 +112,7 @@ function getSize () {
 }
 function getBorder () {
   let rtn = {};
-  for(var i = 0 ; i <= 20 ; i+=0.1){
+  for(var i = 0 ; i <= 51 ; i+=0.1){
     let idx = i.toFixed(1).replace(".0","");
     rtn[`bw${idx}`] = {borderWidth : i}
     rtn[`bbw${idx}`] = {borderBottomWidth : i}
