@@ -23,7 +23,7 @@ class rnClass{
     this.Conv = Conv;  
   }
   
-  addComp(Comp , asName, defaultName, bignore){
+  addComp(Comp , asName, defaultName){
     
     let target =  this;
     if(asName){
@@ -36,7 +36,7 @@ class rnClass{
       if(!isValidElementType(Comp)){
         for (k in Comp){
           try {
-            if(_.indexOf(ignoreKeys , k) >= 0  && !bignore){continue;}
+            if(_.indexOf(ignoreKeys , k) >= 0 && !asName ){continue;}
             let c = Comp[k];
             
             if(isValidElementType(c)){
