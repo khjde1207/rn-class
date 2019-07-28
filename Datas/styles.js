@@ -225,8 +225,8 @@ export default {
 
   "flx-col" : {flexDirection : "column"},
   "flx-row" : {flexDirection : "row"},
-  "flx-colr" : {flexDirection : "row-reverse"},
-  "flx-rowr" : {flexDirection : "column-reverse"},
+  "flx-rowr" : {flexDirection : "row-reverse"},
+  "flx-colr" : {flexDirection : "column-reverse"},
 
   "flx-w" : {flexWrap : "wrap"},
   "flx-nw" : {flexWrap : "nowrap"},
